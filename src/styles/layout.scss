@@ -1,8 +1,18 @@
-.wrapper {
-    margin: 0 auto;
+html, body {
+    margin: 0;
+    padding: 0;
+}
 
-    // a4 size
-    width: 804px;
-    height: 1133px;
-    box-shadow: rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+div {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+    .content {
+        padding: 14px 0;
+        background-color: #f8f9fa;
+        overflow-y: auto;
+    }
 }
