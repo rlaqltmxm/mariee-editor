@@ -1,0 +1,28 @@
+.header-wrapper {
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(218, 220, 224);
+    background: rgb(255, 255, 255);
+    .upper {
+        height: 64px;
+        padding: 12px;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgb(218, 220, 224);
+        .paper-title {
+            #title-input {
+                font-size: 18px;
+                line-height: 22px;
+                margin: 0;
+                padding: 2px 8px;
+                outline: none;
+                border: none;
+            }
+        }
+    }
+}
+
+.toolbar-wrapper {
+    height: 36px;
+    padding: 0 16px;
+}
