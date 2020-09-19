@@ -1,6 +1,6 @@
 import React from 'react';
 import {RichUtils} from 'draft-js';
-import './styles/header.scss';
+import '../styles/header.scss';
 
 export default function Header({ editorState, setEditorState }) {
     const [title, setTitle] = React.useState('');

@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './header';
 import Paper from './paper';
 import {EditorState} from 'draft-js';
-import './styles/layout.scss';
+import '../styles/layout.scss';
 
 export default function Layout() {
 
