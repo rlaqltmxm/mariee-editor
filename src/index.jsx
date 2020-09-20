@@ -1,20 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Layout from './container/layout';
+import App from './container/app';
 import Pusher from 'pusher-js';
-import {updateDocument} from './api';
+import {
+    CHANNEL_NAME,
+} from './api';
 
-// Pusher.logToConsole = true;
+const pusher = new Pusher('a3eb2b3ae9b441d9c8ff', {
+    cluster: 'ap3'
+});
+const channel = pusher.subscribe(CHANNEL_NAME);
 
-// const pusher = new Pusher('a3eb2b3ae9b441d9c8ff', {
-//     cluster: 'ap3'
-// });
-
-// const channel = pusher.subscribe('my-channel');
-// channel.bind('my-event', function(data) {
-//     console.log(data);
-// });
-
-updateDocument(null, 'hello')
-
-ReactDOM.render(<Layout channel={null}/>, document.getElementById('root'));
+ReactDOM.render(
+    <App channel={channel} />,
+    document.getElementById('root')
+);

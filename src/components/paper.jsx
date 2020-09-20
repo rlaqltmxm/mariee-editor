@@ -1,5 +1,5 @@
 import React from 'react';
-import {Editor, EditorState} from 'draft-js';
+import {Editor} from 'draft-js';
 import '../styles/paper.scss';
 
 export default function Paper({ editorState, onChange }) {

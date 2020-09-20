@@ -2,8 +2,12 @@ import React from 'react';
 import {RichUtils} from 'draft-js';
 import '../styles/header.scss';
 
-export default function Header({ editorState, setEditorState }) {
-    const [title, setTitle] = React.useState('');
+export default function Header({
+    title,
+    setTitle,
+    editorState,
+    setEditorState
+}) {
 
     function onChangeTitle({ target: { value }}) {
         setTitle(value);
@@ -22,7 +26,6 @@ export default function Header({ editorState, setEditorState }) {
             case 'blockquote':
             case 'code-block':
                 const updated = RichUtils.toggleBlockType(editorState, key);
-                console.log(RichUtils.getCurrentBlockType(updated))
                 setEditorState(updated);
                 return;
             case 'Bold':
